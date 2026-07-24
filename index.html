@@ -3,8 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dskilushang - Graphiste & Designer Créatif</title>
+    <meta name="description" content="Dskilushang - Designer Créatif spécialisé en Logo, Branding et Design Graphique. Portfolio professionnel.">
+    <meta name="keywords" content="designer, logo, branding, graphique, portfolio, affiche, social media">
+    <meta name="author" content="Dskilushang">
+    <meta property="og:title" content="Dskilushang - Designer Créatif">
+    <meta property="og:description" content="Créez des expériences visuelles exceptionnelles avec mon expertise en design graphique.">
+    <meta property="og:type" content="website">
+    <title>Dskilushang - Graphiste & Designer Créatif | Portfolio</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎨</text></svg>">
 </head>
 <body>
     <!-- Header Navigation -->
@@ -42,8 +49,8 @@
             <div class="about-grid">
                 <div class="about-text">
                     <h2>Qui suis-je ?</h2>
-                    <p>Je suis <strong>Dskilushang</strong>, un designer passionné par la création d'identités visuelles fortes et mémorables. Depuis plusieurs années, j'aide les marques et entrepreneurs à se démarquer par un design authentique et innovant.</p>
-                    <p>Mon approche combine <strong>créativité</strong>, <strong>stratégie</strong> et <strong>attention aux détails</strong> pour transformer vos idées en réalité visuelle captivante.</p>
+                    <p>Je suis <strong>Dskilushang</strong>, un designer passionné par la création d'identités visuelles fortes et mémorables. Avec plusieurs années d'expérience, j'aide les marques et entrepreneurs à se démarquer par un design authentique et innovant.</p>
+                    <p>Mon approche combine <strong>créativité</strong>, <strong>stratégie</strong> et <strong>attention aux détails</strong> pour transformer vos idées en réalité visuelle captivante. Je travaille avec passion sur chaque projet, en écoutant mes clients pour créer des designs qui reflètent vraiment leur vision.</p>
                     
                     <div class="stats">
                         <div class="stat">
@@ -63,7 +70,7 @@
                 <div class="about-image">
                     <div class="image-placeholder">
                         <span>📸</span>
-                        <p>Photo professionnelle</p>
+                        <p>Photo professionnelle à ajouter</p>
                     </div>
                 </div>
             </div>
@@ -91,7 +98,7 @@
                 <div class="service-card">
                     <div class="service-icon">🎨</div>
                     <h3>Branding Complet</h3>
-                    <p>Développement d'une identité visuelle cohérente incluant logo, palette de couleurs, typographie et guidelines.</p>
+                    <p>Développement complet de l'identité visuelle incluant logo, palette de couleurs, typographie et guidelines.</p>
                     <ul class="service-list">
                         <li>✓ Identité visuelle complète</li>
                         <li>✓ Brand guidelines détaillés</li>
@@ -288,31 +295,31 @@
             <p class="section-intro">Envoyez-moi votre brief et parlons de votre vision</p>
             
             <div class="contact-wrapper">
-                <form class="contact-form" onsubmit="handleContactForm(event)">
+                <form class="contact-form" action="https://formspree.io/f/xyzpqwre" method="POST">
                     <div class="form-group">
                         <label for="name">Votre nom *</label>
-                        <input type="text" id="name" placeholder="Ex: Jean Dupont" required>
+                        <input type="text" id="name" name="name" placeholder="Ex: Jean Dupont" required>
                     </div>
                     <div class="form-group">
                         <label for="email">Votre email *</label>
-                        <input type="email" id="email" placeholder="Ex: jean@example.com" required>
+                        <input type="email" id="email" name="email" placeholder="Ex: jean@example.com" required>
                     </div>
                     <div class="form-group">
                         <label for="service">Type de service *</label>
-                        <select id="service" required>
+                        <select id="service" name="service" required>
                             <option value="">-- Sélectionnez --</option>
-                            <option value="logo">Logo Design</option>
-                            <option value="branding">Branding Complet</option>
-                            <option value="affiche">Affiche & Flyer</option>
-                            <option value="social">Design Social Media</option>
-                            <option value="packaging">Packaging Design</option>
-                            <option value="illustration">Illustration</option>
-                            <option value="autre">Autre</option>
+                            <option value="Logo Design">Logo Design</option>
+                            <option value="Branding Complet">Branding Complet</option>
+                            <option value="Affiche & Flyer">Affiche & Flyer</option>
+                            <option value="Design Social Media">Design Social Media</option>
+                            <option value="Packaging Design">Packaging Design</option>
+                            <option value="Illustration">Illustration</option>
+                            <option value="Autre">Autre</option>
                         </select>
                     </div>
                     <div class="form-group">
                         <label for="message">Décrivez votre projet *</label>
-                        <textarea id="message" placeholder="Parlez-moi de votre projet, vos idées, votre budget..." rows="6" required></textarea>
+                        <textarea id="message" name="message" placeholder="Parlez-moi de votre projet, vos idées, votre budget..." rows="6" required></textarea>
                     </div>
                     <button type="submit" class="btn btn-primary btn-large">Envoyer ma demande</button>
                 </form>
@@ -323,14 +330,14 @@
                         <span class="info-icon">📧</span>
                         <div>
                             <strong>Email</strong>
-                            <p>dskilushang@example.com</p>
+                            <p><a href="mailto:danielkilusisa@gmail.com">danielkilusisa@gmail.com</a></p>
                         </div>
                     </div>
                     <div class="info-item">
                         <span class="info-icon">📱</span>
                         <div>
                             <strong>Téléphone</strong>
-                            <p>+33 6 XX XX XX XX</p>
+                            <p>Contactez-moi par email</p>
                         </div>
                     </div>
                     <div class="info-item">
@@ -351,10 +358,10 @@
                     <div class="social-info">
                         <h4>Me suivre</h4>
                         <div class="social-links">
-                            <a href="#" class="social-icon">f</a>
-                            <a href="#" class="social-icon">📷</a>
-                            <a href="#" class="social-icon">in</a>
-                            <a href="#" class="social-icon">🐦</a>
+                            <a href="#" class="social-icon" title="Facebook">f</a>
+                            <a href="#" class="social-icon" title="Instagram">📷</a>
+                            <a href="#" class="social-icon" title="LinkedIn">in</a>
+                            <a href="#" class="social-icon" title="Twitter">𝕏</a>
                         </div>
                     </div>
                 </div>
@@ -381,10 +388,10 @@
             <div class="footer-section">
                 <h4>Services</h4>
                 <ul>
-                    <li><a href="#">Logo Design</a></li>
-                    <li><a href="#">Branding</a></li>
-                    <li><a href="#">Affiche & Flyer</a></li>
-                    <li><a href="#">Social Media</a></li>
+                    <li><a href="#services">Logo Design</a></li>
+                    <li><a href="#services">Branding</a></li>
+                    <li><a href="#services">Affiche & Flyer</a></li>
+                    <li><a href="#services">Social Media</a></li>
                 </ul>
             </div>
         </div>
