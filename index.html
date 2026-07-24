@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dskilushang - Designer</title>
+    <title>Dskilushang - Graphiste & Designer Créatif</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -13,26 +13,135 @@
         <nav>
             <a href="#accueil">Accueil</a>
             <a href="#portfolio">Portfolio</a>
+            <a href="#services">Services</a>
+            <a href="#apropos">À propos</a>
             <a href="#contact">Contact</a>
         </nav>
     </header>
 
-    <!-- Section Accueil -->
+    <!-- Section Accueil - Hero -->
     <section id="accueil" class="hero">
         <div class="container">
-            <div class="emoji">🎨</div>
-            <h1>Dskilushang</h1>
-            <p class="subtitle">Designer Créatif</p>
-            <p class="description">
-                Bienvenue sur mon portfolio ! Je suis un designer passionné qui crée des expériences numériques exceptionnelles. 
-                Mon site est en construction, mais je suis déjà en ligne ! 🚀
-            </p>
-            <div class="buttons">
-                <button class="btn btn-primary" onclick="scrollToSection('portfolio')">Voir mon travail</button>
-                <button class="btn btn-secondary" onclick="scrollToSection('contact')">Contactez-moi</button>
+            <div class="hero-content">
+                <h1>Créez des expériences <span class="highlight">visuelles exceptionnelles</span></h1>
+                <p class="hero-subtitle">Designer Créatif spécialisé en Logo, Branding et Design Graphique</p>
+                <div class="buttons">
+                    <button class="btn btn-primary btn-large" onclick="scrollToSection('portfolio')">Voir mon travail</button>
+                    <button class="btn btn-secondary btn-large" onclick="scrollToSection('contact')">Commencer un projet</button>
+                </div>
+                <div class="scroll-indicator">
+                    <p>Découvrez mon portfolio →</p>
+                </div>
             </div>
-            <div class="status">
-                <span class="status-badge">✓ Site actif</span>
+        </div>
+    </section>
+
+    <!-- Section À propos -->
+    <section id="apropos" class="about-section">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-text">
+                    <h2>Qui suis-je ?</h2>
+                    <p>Je suis <strong>Dskilushang</strong>, un designer passionné par la création d'identités visuelles fortes et mémorables. Depuis plusieurs années, j'aide les marques et entrepreneurs à se démarquer par un design authentique et innovant.</p>
+                    <p>Mon approche combine <strong>créativité</strong>, <strong>stratégie</strong> et <strong>attention aux détails</strong> pour transformer vos idées en réalité visuelle captivante.</p>
+                    
+                    <div class="stats">
+                        <div class="stat">
+                            <h3>50+</h3>
+                            <p>Projets réalisés</p>
+                        </div>
+                        <div class="stat">
+                            <h3>30+</h3>
+                            <p>Clients satisfaits</p>
+                        </div>
+                        <div class="stat">
+                            <h3>5+</h3>
+                            <p>Années d'expérience</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <div class="image-placeholder">
+                        <span>📸</span>
+                        <p>Photo professionnelle</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Services -->
+    <section id="services" class="services-section">
+        <div class="container">
+            <h2>Mes Spécialités</h2>
+            <p class="section-intro">Services de design adaptés à vos besoins</p>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">🎯</div>
+                    <h3>Logo Design</h3>
+                    <p>Création de logos uniques et intemporels qui représentent l'essence de votre marque et marquent les esprits.</p>
+                    <ul class="service-list">
+                        <li>✓ Concepts créatifs multiples</li>
+                        <li>✓ Variations couleur et N&B</li>
+                        <li>✓ Guide d'utilisation</li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">🎨</div>
+                    <h3>Branding Complet</h3>
+                    <p>Développement d'une identité visuelle cohérente incluant logo, palette de couleurs, typographie et guidelines.</p>
+                    <ul class="service-list">
+                        <li>✓ Identité visuelle complète</li>
+                        <li>✓ Brand guidelines détaillés</li>
+                        <li>✓ Consistency sur tous supports</li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">📄</div>
+                    <h3>Affiche & Flyer</h3>
+                    <p>Design d'affiches percutantes et flyers attractifs pour vos événements, promotions et campagnes marketing.</p>
+                    <ul class="service-list">
+                        <li>✓ Designs impactants</li>
+                        <li>✓ Optimisation pour impression</li>
+                        <li>✓ Variantes multilingues</li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">📱</div>
+                    <h3>Design Social Media</h3>
+                    <p>Création de visuels engageants pour les réseaux sociaux : stories, posts, banners optimisés pour chaque plateforme.</p>
+                    <ul class="service-list">
+                        <li>✓ Posts Instagram, Facebook, TikTok</li>
+                        <li>✓ Stories et Reels</li>
+                        <li>✓ Cohérence visuelle</li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">📚</div>
+                    <h3>Packaging Design</h3>
+                    <p>Conception d'emballages esthétiques et fonctionnels qui attirent l'attention et reflètent la qualité de votre produit.</p>
+                    <ul class="service-list">
+                        <li>✓ Design 3D mockup</li>
+                        <li>✓ Fichiers impression prêts</li>
+                        <li>✓ Durabilité et originalité</li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">🖼️</div>
+                    <h3>Illustration</h3>
+                    <p>Illustrations personnalisées et originales pour donner une touche unique à vos projets et communications.</p>
+                    <ul class="service-list">
+                        <li>✓ Illustrations uniques</li>
+                        <li>✓ Style personnalisé</li>
+                        <li>✓ Formats vectoriel & raster</li>
+                    </ul>
+                </div>
             </div>
         </div>
     </section>
@@ -41,33 +150,131 @@
     <section id="portfolio" class="portfolio-section">
         <div class="container">
             <h2>Mon Portfolio</h2>
-            <p class="section-intro">Découvrez quelques-uns de mes projets récents</p>
+            <p class="section-intro">Découvrez une sélection de mes meilleurs projets</p>
             
+            <!-- Filter Buttons -->
+            <div class="filter-buttons">
+                <button class="filter-btn active" onclick="filterPortfolio('all')">Tous les projets</button>
+                <button class="filter-btn" onclick="filterPortfolio('logo')">Logos</button>
+                <button class="filter-btn" onclick="filterPortfolio('branding')">Branding</button>
+                <button class="filter-btn" onclick="filterPortfolio('affiche')">Affiches</button>
+                <button class="filter-btn" onclick="filterPortfolio('social')">Social Media</button>
+            </div>
+
+            <!-- Portfolio Grid -->
             <div class="portfolio-grid">
-                <div class="project-card">
-                    <div class="project-image" style="background-image: url('hero.jpg')"></div>
-                    <div class="project-content">
-                        <h3>Projet 1 - Design Web</h3>
-                        <p>Création d'une interface utilisateur moderne et responsive pour une plateforme e-commerce.</p>
-                        <span class="tag">UI/UX Design</span>
+                <!-- Projet 1 - Logo -->
+                <div class="portfolio-item" data-category="logo">
+                    <div class="portfolio-image" style="background-image: url('hero.jpg')">
+                        <div class="portfolio-overlay">
+                            <div class="overlay-content">
+                                <h3>TechVision Logo</h3>
+                                <p class="category-tag">Logo Design</p>
+                                <a href="#" class="view-btn" onclick="openProjectModal(event, 'techvision')">Voir le projet</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
-                <div class="project-card">
-                    <div class="project-image" style="background-image: url('projet2.jpg')"></div>
-                    <div class="project-content">
-                        <h3>Projet 2 - Branding</h3>
-                        <p>Développement complet de l'identité visuelle pour une startup technologique innovante.</p>
-                        <span class="tag">Branding</span>
+                <!-- Projet 2 - Branding -->
+                <div class="portfolio-item" data-category="branding">
+                    <div class="portfolio-image" style="background-image: url('projet2.jpg')">
+                        <div class="portfolio-overlay">
+                            <div class="overlay-content">
+                                <h3>EcoGreen Branding</h3>
+                                <p class="category-tag">Branding Complet</p>
+                                <a href="#" class="view-btn" onclick="openProjectModal(event, 'ecogreen')">Voir le projet</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
-                <div class="project-card">
-                    <div class="project-image" style="background-image: url('hero.jpg')"></div>
-                    <div class="project-content">
-                        <h3>Projet 3 - Motion Design</h3>
-                        <p>Animation et motion graphics pour des vidéos promotionnelles d'entreprise.</p>
-                        <span class="tag">Motion Design</span>
+                <!-- Projet 3 - Affiche -->
+                <div class="portfolio-item" data-category="affiche">
+                    <div class="portfolio-image" style="background-image: url('hero.jpg')">
+                        <div class="portfolio-overlay">
+                            <div class="overlay-content">
+                                <h3>Festival d'Été Affiche</h3>
+                                <p class="category-tag">Affiche & Flyer</p>
+                                <a href="#" class="view-btn" onclick="openProjectModal(event, 'festival')">Voir le projet</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Projet 4 - Social Media -->
+                <div class="portfolio-item" data-category="social">
+                    <div class="portfolio-image" style="background-image: url('projet2.jpg')">
+                        <div class="portfolio-overlay">
+                            <div class="overlay-content">
+                                <h3>Fashion Brand Social</h3>
+                                <p class="category-tag">Design Social Media</p>
+                                <a href="#" class="view-btn" onclick="openProjectModal(event, 'fashion')">Voir le projet</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Projet 5 - Logo -->
+                <div class="portfolio-item" data-category="logo">
+                    <div class="portfolio-image" style="background-image: url('hero.jpg')">
+                        <div class="portfolio-overlay">
+                            <div class="overlay-content">
+                                <h3>Coffee Shop Logo</h3>
+                                <p class="category-tag">Logo Design</p>
+                                <a href="#" class="view-btn" onclick="openProjectModal(event, 'coffee')">Voir le projet</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Projet 6 - Branding -->
+                <div class="portfolio-item" data-category="branding">
+                    <div class="portfolio-image" style="background-image: url('projet2.jpg')">
+                        <div class="portfolio-overlay">
+                            <div class="overlay-content">
+                                <h3>Startup Tech Branding</h3>
+                                <p class="category-tag">Branding Complet</p>
+                                <a href="#" class="view-btn" onclick="openProjectModal(event, 'startup')">Voir le projet</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Témoignages -->
+    <section class="testimonials-section">
+        <div class="container">
+            <h2>Témoignages Clients</h2>
+            <p class="section-intro">Ce que mes clients pensent de mon travail</p>
+            
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p class="testimonial-text">"Dskilushang a transformé ma vision en réalité. Son design de logo est parfait et reflète exactement l'essence de ma marque !"</p>
+                    <div class="testimonial-author">
+                        <strong>Marie Dupont</strong>
+                        <span>Fondatrice - EcoGreen</span>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p class="testimonial-text">"Professionnel, créatif et à l'écoute. Les designs sont modernes, attrayants et dépassent nos attentes. Je recommande vivement !"</p>
+                    <div class="testimonial-author">
+                        <strong>Pierre Martin</strong>
+                        <span>PDG - TechVision</span>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p class="testimonial-text">"Excellent travail sur nos affiches pour le festival. Très créatif, délai respecté et prix compétitif. Parfait !"</p>
+                    <div class="testimonial-author">
+                        <strong>Sophie Laurent</strong>
+                        <span>Event Manager - Festival d'Été</span>
                     </div>
                 </div>
             </div>
@@ -77,42 +284,122 @@
     <!-- Section Contact -->
     <section id="contact" class="contact-section">
         <div class="container">
-            <h2>Travaillons Ensemble</h2>
-            <p class="section-intro">Vous avez un projet en tête ? Contactez-moi !</p>
+            <h2>Débutons un Projet Ensemble</h2>
+            <p class="section-intro">Envoyez-moi votre brief et parlons de votre vision</p>
             
-            <form class="contact-form" onsubmit="handleContactForm(event)">
-                <div class="form-group">
-                    <input type="text" placeholder="Votre nom" required>
-                </div>
-                <div class="form-group">
-                    <input type="email" placeholder="Votre email" required>
-                </div>
-                <div class="form-group">
-                    <textarea placeholder="Votre message" rows="5" required></textarea>
-                </div>
-                <button type="submit" class="btn btn-primary btn-large">Envoyer le message</button>
-            </form>
+            <div class="contact-wrapper">
+                <form class="contact-form" onsubmit="handleContactForm(event)">
+                    <div class="form-group">
+                        <label for="name">Votre nom *</label>
+                        <input type="text" id="name" placeholder="Ex: Jean Dupont" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Votre email *</label>
+                        <input type="email" id="email" placeholder="Ex: jean@example.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="service">Type de service *</label>
+                        <select id="service" required>
+                            <option value="">-- Sélectionnez --</option>
+                            <option value="logo">Logo Design</option>
+                            <option value="branding">Branding Complet</option>
+                            <option value="affiche">Affiche & Flyer</option>
+                            <option value="social">Design Social Media</option>
+                            <option value="packaging">Packaging Design</option>
+                            <option value="illustration">Illustration</option>
+                            <option value="autre">Autre</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Décrivez votre projet *</label>
+                        <textarea id="message" placeholder="Parlez-moi de votre projet, vos idées, votre budget..." rows="6" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-large">Envoyer ma demande</button>
+                </form>
 
-            <div class="contact-info">
-                <h3>Me contacter directement</h3>
-                <ul>
-                    <li>📧 <strong>Email:</strong> dskilushang@example.com</li>
-                    <li>📱 <strong>Téléphone:</strong> +33 6 XX XX XX XX</li>
-                    <li>📍 <strong>Localisation:</strong> France</li>
-                </ul>
+                <div class="contact-info">
+                    <h3>Informations de Contact</h3>
+                    <div class="info-item">
+                        <span class="info-icon">📧</span>
+                        <div>
+                            <strong>Email</strong>
+                            <p>dskilushang@example.com</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-icon">📱</span>
+                        <div>
+                            <strong>Téléphone</strong>
+                            <p>+33 6 XX XX XX XX</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-icon">📍</span>
+                        <div>
+                            <strong>Localisation</strong>
+                            <p>France</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-icon">⏰</span>
+                        <div>
+                            <strong>Disponibilité</strong>
+                            <p>Projets freelance bienvenue</p>
+                        </div>
+                    </div>
+
+                    <div class="social-info">
+                        <h4>Me suivre</h4>
+                        <div class="social-links">
+                            <a href="#" class="social-icon">f</a>
+                            <a href="#" class="social-icon">📷</a>
+                            <a href="#" class="social-icon">in</a>
+                            <a href="#" class="social-icon">🐦</a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
     <footer>
-        <p>© 2026 Dskilushang. Tous droits réservés.</p>
-        <div class="social-links">
-            <a href="#">LinkedIn</a> | 
-            <a href="#">Instagram</a> | 
-            <a href="#">Portfolio</a>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Dskilushang</h4>
+                <p>Designer Créatif spécialisé en Logo, Branding et Design Graphique.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Menu</h4>
+                <ul>
+                    <li><a href="#accueil">Accueil</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Services</h4>
+                <ul>
+                    <li><a href="#">Logo Design</a></li>
+                    <li><a href="#">Branding</a></li>
+                    <li><a href="#">Affiche & Flyer</a></li>
+                    <li><a href="#">Social Media</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Dskilushang. Tous droits réservés.</p>
         </div>
     </footer>
+
+    <!-- Project Modal -->
+    <div id="projectModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeProjectModal()">&times;</span>
+            <div id="modalBody"></div>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>
