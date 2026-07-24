@@ -4,171 +4,116 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dskilushang - Designer</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 20px;
-        }
-        
-        .container {
-            background: white;
-            border-radius: 20px;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
-            padding: 60px 40px;
-            text-align: center;
-            max-width: 700px;
-        }
-        
-        h1 {
-            color: #333;
-            font-size: 2.5em;
-            margin-bottom: 10px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-        
-        .subtitle {
-            color: #666;
-            font-size: 1.2em;
-            margin-bottom: 30px;
-            font-weight: 300;
-        }
-        
-        .emoji {
-            font-size: 4em;
-            margin-bottom: 20px;
-        }
-        
-        .description {
-            color: #555;
-            line-height: 1.8;
-            margin-bottom: 40px;
-            font-size: 1.1em;
-        }
-        
-        .buttons {
-            display: flex;
-            gap: 15px;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-        
-        .btn {
-            padding: 12px 30px;
-            border: none;
-            border-radius: 50px;
-            font-size: 1em;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            text-decoration: none;
-            display: inline-block;
-        }
-        
-        .btn-primary {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-        }
-        
-        .btn-primary:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);
-        }
-        
-        .btn-secondary {
-            background: white;
-            color: #667eea;
-            border: 2px solid #667eea;
-        }
-        
-        .btn-secondary:hover {
-            background: #667eea;
-            color: white;
-            transform: translateY(-3px);
-        }
-        
-        .status {
-            margin-top: 40px;
-            padding-top: 30px;
-            border-top: 2px solid #eee;
-        }
-        
-        .status-badge {
-            display: inline-block;
-            background: #4ade80;
-            color: white;
-            padding: 8px 16px;
-            border-radius: 50px;
-            font-size: 0.9em;
-            font-weight: 600;
-        }
-        
-        footer {
-            margin-top: 50px;
-            color: #999;
-            font-size: 0.9em;
-        }
-        
-        @media (max-width: 600px) {
-            .container {
-                padding: 40px 20px;
-            }
-            
-            h1 {
-                font-size: 1.8em;
-            }
-            
-            .emoji {
-                font-size: 3em;
-            }
-            
-            .buttons {
-                flex-direction: column;
-            }
-            
-            .btn {
-                width: 100%;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <div class="emoji">🎨</div>
-        
-        <h1>Dskilushang</h1>
-        <p class="subtitle">Designer Créatif</p>
-        
-        <p class="description">
-            Bienvenue sur mon portfolio ! Je suis un designer passionné qui crée des expériences numériques exceptionnelles. 
-            Mon site est en construction, mais je suis déjà en ligne ! 🚀
-        </p>
-        
-        <div class="buttons">
-            <button class="btn btn-primary">Voir mon travail</button>
-            <button class="btn btn-secondary">Contactez-moi</button>
+    <!-- Header Navigation -->
+    <header>
+        <div class="logo">🎨 Dskilushang</div>
+        <nav>
+            <a href="#accueil">Accueil</a>
+            <a href="#portfolio">Portfolio</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Section Accueil -->
+    <section id="accueil" class="hero">
+        <div class="container">
+            <div class="emoji">🎨</div>
+            <h1>Dskilushang</h1>
+            <p class="subtitle">Designer Créatif</p>
+            <p class="description">
+                Bienvenue sur mon portfolio ! Je suis un designer passionné qui crée des expériences numériques exceptionnelles. 
+                Mon site est en construction, mais je suis déjà en ligne ! 🚀
+            </p>
+            <div class="buttons">
+                <button class="btn btn-primary" onclick="scrollToSection('portfolio')">Voir mon travail</button>
+                <button class="btn btn-secondary" onclick="scrollToSection('contact')">Contactez-moi</button>
+            </div>
+            <div class="status">
+                <span class="status-badge">✓ Site actif</span>
+            </div>
         </div>
-        
-        <div class="status">
-            <span class="status-badge">✓ Site actif</span>
+    </section>
+
+    <!-- Section Portfolio -->
+    <section id="portfolio" class="portfolio-section">
+        <div class="container">
+            <h2>Mon Portfolio</h2>
+            <p class="section-intro">Découvrez quelques-uns de mes projets récents</p>
+            
+            <div class="portfolio-grid">
+                <div class="project-card">
+                    <div class="project-image" style="background-image: url('hero.jpg')"></div>
+                    <div class="project-content">
+                        <h3>Projet 1 - Design Web</h3>
+                        <p>Création d'une interface utilisateur moderne et responsive pour une plateforme e-commerce.</p>
+                        <span class="tag">UI/UX Design</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image" style="background-image: url('projet2.jpg')"></div>
+                    <div class="project-content">
+                        <h3>Projet 2 - Branding</h3>
+                        <p>Développement complet de l'identité visuelle pour une startup technologique innovante.</p>
+                        <span class="tag">Branding</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image" style="background-image: url('hero.jpg')"></div>
+                    <div class="project-content">
+                        <h3>Projet 3 - Motion Design</h3>
+                        <p>Animation et motion graphics pour des vidéos promotionnelles d'entreprise.</p>
+                        <span class="tag">Motion Design</span>
+                    </div>
+                </div>
+            </div>
         </div>
-        
-        <footer>
-            <p>© 2026 Dskilushang. Tous droits réservés.</p>
-        </footer>
-    </div>
+    </section>
+
+    <!-- Section Contact -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2>Travaillons Ensemble</h2>
+            <p class="section-intro">Vous avez un projet en tête ? Contactez-moi !</p>
+            
+            <form class="contact-form" onsubmit="handleContactForm(event)">
+                <div class="form-group">
+                    <input type="text" placeholder="Votre nom" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" placeholder="Votre email" required>
+                </div>
+                <div class="form-group">
+                    <textarea placeholder="Votre message" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary btn-large">Envoyer le message</button>
+            </form>
+
+            <div class="contact-info">
+                <h3>Me contacter directement</h3>
+                <ul>
+                    <li>📧 <strong>Email:</strong> dskilushang@example.com</li>
+                    <li>📱 <strong>Téléphone:</strong> +33 6 XX XX XX XX</li>
+                    <li>📍 <strong>Localisation:</strong> France</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2026 Dskilushang. Tous droits réservés.</p>
+        <div class="social-links">
+            <a href="#">LinkedIn</a> | 
+            <a href="#">Instagram</a> | 
+            <a href="#">Portfolio</a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
