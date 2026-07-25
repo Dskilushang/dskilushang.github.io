@@ -3,13 +3,15 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mon Portfolio | Créateur Visuel & Design Graphique</title>
+    <meta name="description" content="DSKILUSHANG DESIGNER - Logo, Branding, Affiches, Design Sportif et bien plus. Designer professionnel basé à Luanda, Angola." />
+    <meta name="keywords" content="designer, logo, branding, affiche, design graphique, Angola, Luanda" />
+    <meta name="author" content="Nkilusisa Salomão Lutati" />
+    <title>DSKILUSHANG DESIGNER | Design Graphique Professionnel</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
     <style>
-        /* ===== RESET & BASE ===== */
         * {
             margin: 0;
             padding: 0;
@@ -25,12 +27,10 @@
             line-height: 1.6;
         }
 
-        /* ===== SCROLLBAR ===== */
         ::-webkit-scrollbar { width: 8px; }
         ::-webkit-scrollbar-track { background: #1a1a1a; }
         ::-webkit-scrollbar-thumb { background: #c084fc; border-radius: 4px; }
 
-        /* ===== UTILITIES ===== */
         .container {
             max-width: 1200px;
             margin: 0 auto;
@@ -85,7 +85,7 @@
             transform: translateY(-3px);
         }
 
-        /* ===== HEADER / NAV ===== */
+        /* HEADER */
         header {
             position: fixed;
             top: 0;
@@ -110,12 +110,13 @@
             padding: 0 24px;
         }
         .logo {
-            font-size: 1.6rem;
+            font-size: 1.4rem;
             font-weight: 800;
             background: linear-gradient(135deg, #c084fc, #818cf8);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
+            letter-spacing: 1px;
         }
         .nav-links {
             display: flex;
@@ -151,13 +152,14 @@
             border: none;
         }
 
-        /* ===== HERO ===== */
+        /* HERO */
         .hero {
             min-height: 100vh;
             display: flex;
             align-items: center;
             position: relative;
             overflow: hidden;
+            margin-top: 70px;
         }
         .hero::before {
             content: '';
@@ -197,10 +199,10 @@
             border: 1px solid rgba(192,132,252,0.2);
         }
         .hero-content h1 {
-            font-size: 4rem;
+            font-size: 3.5rem;
             font-weight: 800;
-            line-height: 1.1;
-            margin-bottom: 16px;
+            line-height: 1.2;
+            margin-bottom: 20px;
         }
         .hero-content h1 .highlight {
             background: linear-gradient(135deg, #c084fc, #818cf8);
@@ -218,11 +220,11 @@
             display: flex;
             gap: 16px;
             flex-wrap: wrap;
+            margin-bottom: 40px;
         }
         .hero-social {
             display: flex;
             gap: 18px;
-            margin-top: 40px;
         }
         .hero-social a {
             color: #666;
@@ -231,7 +233,42 @@
         }
         .hero-social a:hover { color: #c084fc; transform: translateY(-3px); }
 
-        /* ===== PORTFOLIO ===== */
+        /* SERVICES */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 28px;
+        }
+        .service-card {
+            background: #121212;
+            border: 1px solid rgba(255,255,255,0.05);
+            border-radius: 16px;
+            padding: 36px 28px;
+            transition: 0.4s;
+        }
+        .service-card:hover {
+            transform: translateY(-8px);
+            border-color: rgba(192,132,252,0.3);
+            box-shadow: 0 16px 50px rgba(192,132,252,0.1);
+        }
+        .service-card .icon {
+            font-size: 2.5rem;
+            color: #c084fc;
+            margin-bottom: 16px;
+            display: block;
+        }
+        .service-card h3 { 
+            font-size: 1.25rem; 
+            margin-bottom: 12px;
+            font-weight: 700;
+        }
+        .service-card p { 
+            color: #888; 
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        /* PORTFOLIO */
         .portfolio-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
@@ -242,7 +279,7 @@
             border-radius: 16px;
             overflow: hidden;
             background: #1a1a1a;
-            aspect-ratio: 4/3;
+            aspect-ratio: 1;
             cursor: pointer;
             transition: 0.4s;
             border: 1px solid rgba(255,255,255,0.05);
@@ -251,106 +288,47 @@
             transform: translateY(-8px);
             box-shadow: 0 20px 60px rgba(192,132,252,0.15);
         }
-        .portfolio-item .placeholder-img {
+        .portfolio-placeholder {
             width: 100%;
             height: 100%;
             display: flex;
+            flex-direction: column;
             align-items: center;
             justify-content: center;
-            font-size: 2.5rem;
-            color: #333;
             background: linear-gradient(145deg, #1a1a1a, #222);
+            color: #555;
+        }
+        .portfolio-placeholder i {
+            font-size: 3rem;
+            margin-bottom: 12px;
+        }
+        .portfolio-placeholder p {
+            font-size: 0.9rem;
+            text-align: center;
+            max-width: 80%;
         }
         .portfolio-overlay {
             position: absolute;
             bottom: 0;
             left: 0;
             right: 0;
-            padding: 20px 24px;
-            background: linear-gradient(transparent, rgba(0,0,0,0.9));
+            padding: 24px;
+            background: linear-gradient(transparent, rgba(0,0,0,0.95));
             transform: translateY(100%);
             transition: 0.4s;
         }
         .portfolio-item:hover .portfolio-overlay { transform: translateY(0); }
-        .portfolio-overlay h3 { font-size: 1.2rem; margin-bottom: 4px; }
-        .portfolio-overlay p { color: #aaa; font-size: 0.85rem; }
-
-        .portfolio-tags {
-            display: flex;
-            gap: 8px;
-            flex-wrap: wrap;
-            margin-bottom: 20px;
+        .portfolio-overlay h3 { 
+            font-size: 1.2rem; 
+            margin-bottom: 8px; 
+            font-weight: 700;
         }
-        .portfolio-tags span {
-            padding: 6px 16px;
-            border-radius: 50px;
-            background: rgba(192,132,252,0.1);
-            color: #c084fc;
-            font-size: 0.8rem;
-            border: 1px solid rgba(192,132,252,0.15);
-            cursor: pointer;
-            transition: 0.3s;
-        }
-        .portfolio-tags span:hover, .portfolio-tags span.active {
-            background: #c084fc;
-            color: #0a0a0a;
+        .portfolio-overlay p { 
+            color: #aaa; 
+            font-size: 0.85rem; 
         }
 
-        /* ===== BLOG ===== */
-        .blog-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
-            gap: 28px;
-        }
-        .blog-card {
-            background: #121212;
-            border-radius: 16px;
-            overflow: hidden;
-            border: 1px solid rgba(255,255,255,0.05);
-            transition: 0.4s;
-        }
-        .blog-card:hover {
-            transform: translateY(-6px);
-            box-shadow: 0 16px 48px rgba(0,0,0,0.4);
-            border-color: rgba(192,132,252,0.2);
-        }
-        .blog-card-img {
-            height: 200px;
-            background: linear-gradient(145deg, #1a1a1a, #222);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #333;
-            font-size: 2rem;
-        }
-        .blog-card-body {
-            padding: 24px;
-        }
-        .blog-card-body .date {
-            color: #666;
-            font-size: 0.8rem;
-            margin-bottom: 8px;
-        }
-        .blog-card-body h3 {
-            font-size: 1.15rem;
-            margin-bottom: 8px;
-            line-height: 1.4;
-        }
-        .blog-card-body p {
-            color: #999;
-            font-size: 0.9rem;
-            margin-bottom: 16px;
-        }
-        .blog-card-body a {
-            color: #c084fc;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 0.9rem;
-            transition: 0.3s;
-        }
-        .blog-card-body a:hover { color: #a78bfa; }
-
-        /* ===== ABOUT ===== */
+        /* ABOUT */
         .about-wrap {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -365,60 +343,63 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 5rem;
+            font-size: 4rem;
             color: #333;
             border: 1px solid rgba(255,255,255,0.05);
         }
-        .about-text h2 { font-size: 2.5rem; font-weight: 800; margin-bottom: 12px; }
-        .about-text .lead { color: #c084fc; font-weight: 600; margin-bottom: 16px; font-size: 1.1rem; }
-        .about-text p { color: #999; margin-bottom: 16px; }
+        .about-text h2 { 
+            font-size: 2.5rem; 
+            font-weight: 800; 
+            margin-bottom: 16px; 
+        }
+        .about-text .lead { 
+            color: #c084fc; 
+            font-weight: 600; 
+            margin-bottom: 20px; 
+            font-size: 1.1rem; 
+        }
+        .about-text p { 
+            color: #999; 
+            margin-bottom: 20px;
+            line-height: 1.8;
+        }
         .about-stats {
             display: flex;
             gap: 40px;
-            margin-top: 32px;
+            margin-top: 40px;
         }
-        .about-stats .stat h4 { font-size: 2rem; font-weight: 800; color: #c084fc; }
-        .about-stats .stat p { color: #666; font-size: 0.85rem; margin: 0; }
+        .about-stats .stat h4 { 
+            font-size: 2rem; 
+            font-weight: 800; 
+            color: #c084fc; 
+        }
+        .about-stats .stat p { 
+            color: #666; 
+            font-size: 0.85rem; 
+            margin-top: 4px;
+        }
 
-        /* ===== SERVICES ===== */
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-            gap: 24px;
-        }
-        .service-card {
-            background: #121212;
-            border: 1px solid rgba(255,255,255,0.05);
-            border-radius: 16px;
-            padding: 36px 28px;
-            transition: 0.4s;
-        }
-        .service-card:hover {
-            transform: translateY(-6px);
-            border-color: rgba(192,132,252,0.2);
-            box-shadow: 0 12px 40px rgba(192,132,252,0.08);
-        }
-        .service-card i {
-            font-size: 2rem;
-            color: #c084fc;
-            margin-bottom: 16px;
-        }
-        .service-card h3 { font-size: 1.15rem; margin-bottom: 8px; }
-        .service-card p { color: #888; font-size: 0.9rem; }
-
-        /* ===== CONTACT ===== */
+        /* CONTACT */
         .contact-wrap {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 48px;
         }
-        .contact-info h3 { font-size: 1.5rem; margin-bottom: 12px; }
-        .contact-info p { color: #888; margin-bottom: 24px; }
+        .contact-info h3 { 
+            font-size: 1.5rem; 
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+        .contact-info p { 
+            color: #888; 
+            margin-bottom: 24px;
+            line-height: 1.8;
+        }
         .contact-item {
             display: flex;
-            align-items: center;
+            align-items: flex-start;
             gap: 16px;
-            margin-bottom: 20px;
+            margin-bottom: 28px;
         }
         .contact-item i {
             width: 44px;
@@ -430,9 +411,26 @@
             justify-content: center;
             color: #c084fc;
             font-size: 1.1rem;
+            flex-shrink: 0;
         }
-        .contact-item div h4 { font-size: 0.95rem; }
-        .contact-item div p { color: #888; font-size: 0.85rem; margin: 0; }
+        .contact-item div h4 { 
+            font-size: 0.95rem;
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+        .contact-item div p { 
+            color: #888; 
+            font-size: 0.85rem; 
+            margin: 0;
+        }
+        .contact-item a {
+            color: #c084fc;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+        .contact-item a:hover {
+            color: #a78bfa;
+        }
 
         .contact-form input,
         .contact-form textarea {
@@ -453,36 +451,64 @@
             border-color: #c084fc;
             box-shadow: 0 0 0 3px rgba(192,132,252,0.1);
         }
-        .contact-form textarea { min-height: 140px; resize: vertical; }
-        .contact-form .btn { width: 100%; }
+        .contact-form textarea { 
+            min-height: 140px; 
+            resize: vertical; 
+        }
+        .contact-form .btn { 
+            width: 100%; 
+            text-align: center;
+        }
 
-        /* ===== FOOTER ===== */
+        /* FOOTER */
         footer {
             border-top: 1px solid rgba(255,255,255,0.05);
-            padding: 32px 0;
-            margin-top: 40px;
+            padding: 48px 0 20px 0;
         }
-        footer .container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 16px;
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 32px;
+            margin-bottom: 32px;
         }
-        footer p { color: #555; font-size: 0.85rem; }
-        footer .social a {
-            color: #555;
-            margin-left: 16px;
-            font-size: 1.1rem;
+        .footer-section h4 {
+            margin-bottom: 16px;
+            font-weight: 700;
+            font-size: 1rem;
+        }
+        .footer-section p {
+            color: #888;
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+        .footer-section ul {
+            list-style: none;
+        }
+        .footer-section ul li {
+            margin-bottom: 10px;
+        }
+        .footer-section a {
+            color: #888;
+            text-decoration: none;
+            font-size: 0.9rem;
             transition: 0.3s;
         }
-        footer .social a:hover { color: #c084fc; }
+        .footer-section a:hover {
+            color: #c084fc;
+        }
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.05);
+            padding-top: 20px;
+            text-align: center;
+            color: #555;
+            font-size: 0.85rem;
+        }
 
-        /* ===== RESPONSIVE ===== */
+        /* RESPONSIVE */
         @media (max-width: 968px) {
             .about-wrap { grid-template-columns: 1fr; gap: 32px; }
             .contact-wrap { grid-template-columns: 1fr; }
-            .hero-content h1 { font-size: 2.8rem; }
+            .hero-content h1 { font-size: 2.5rem; }
         }
         @media (max-width: 768px) {
             .nav-links {
@@ -499,227 +525,243 @@
             }
             .nav-links.open { display: flex; }
             .menu-toggle { display: block; }
-            .hero-content h1 { font-size: 2.2rem; }
+            .hero-content h1 { font-size: 2rem; }
             .section-title { font-size: 2rem; }
-            .portfolio-grid { grid-template-columns: 1fr; }
-            .blog-grid { grid-template-columns: 1fr; }
-            .services-grid { grid-template-columns: 1fr; }
-            .about-stats { gap: 24px; flex-wrap: wrap; }
+            .hero-btns { flex-direction: column; }
             .hero-btns .btn { width: 100%; text-align: center; }
+            .about-stats { gap: 20px; flex-wrap: wrap; }
         }
         @media (max-width: 480px) {
-            .hero-content h1 { font-size: 1.8rem; }
+            .hero-content h1 { font-size: 1.6rem; }
             .container { padding: 0 16px; }
             .section { padding: 60px 0; }
+            .hero { margin-top: 50px; }
+        }
+
+        .empty-state {
+            text-align: center;
+            padding: 60px 20px;
+            background: rgba(192,132,252,0.05);
+            border-radius: 16px;
+            border: 2px dashed rgba(192,132,252,0.2);
+        }
+        .empty-state i {
+            font-size: 3rem;
+            color: #c084fc;
+            margin-bottom: 16px;
+            display: block;
+        }
+        .empty-state p {
+            color: #888;
+            margin-bottom: 16px;
         }
     </style>
 </head>
 <body>
 
-    <!-- ===== HEADER ===== -->
+    <!-- HEADER -->
     <header id="header">
         <nav>
-            <div class="logo">MonPortfolio</div>
+            <div class="logo">DSKILUSHANG</div>
             <button class="menu-toggle" id="menuToggle" aria-label="Menu">
                 <i class="fas fa-bars"></i>
             </button>
             <ul class="nav-links" id="navLinks">
-                <li><a href="#hero">Accueil</a></li>
-                <li><a href="#portfolio">Portfolio</a></li>
-                <li><a href="#blog">Blog</a></li>
-                <li><a href="#about">À propos</a></li>
+                <li><a href="#home">Accueil</a></li>
                 <li><a href="#services">Services</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#about">À propos</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
 
-    <!-- ===== HERO ===== -->
-    <section class="hero" id="hero">
+    <!-- HERO -->
+    <section class="hero" id="home">
         <div class="container hero-content">
-            <div class="badge">✨ Créateur de visuels depuis 2024</div>
+            <div class="badge">🎨 Designer Créatif Professionnel</div>
             <h1>
-                Je transforme vos <br />
-                <span class="highlight">idées en visuels</span>
+                Transformez vos <br>
+                <span class="highlight">idées en réalité visuelle</span>
             </h1>
             <p>
-                Design graphique, identité visuelle, motion design et création de contenu
-                pour donner vie à votre marque.
+                Designer graphique basé à Luanda, Angola. Spécialisé en branding, design sportif, 
+                affiches et bien plus. Créons ensemble votre identité visuelle unique.
             </p>
             <div class="hero-btns">
-                <a href="#portfolio" class="btn btn-primary">Voir mon travail</a>
+                <a href="#portfolio" class="btn btn-primary">Voir mon portfolio</a>
                 <a href="#contact" class="btn btn-outline">Me contacter</a>
             </div>
             <div class="hero-social">
-                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                <a href="#" aria-label="Behance"><i class="fab fa-behance"></i></a>
-                <a href="#" aria-label="Dribbble"><i class="fab fa-dribbble"></i></a>
-                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                <a href="#" aria-label="Instagram" title="À compléter"><i class="fab fa-instagram"></i></a>
+                <a href="#" aria-label="WhatsApp" title="À compléter"><i class="fab fa-whatsapp"></i></a>
+                <a href="#" aria-label="LinkedIn" title="À compléter"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" aria-label="Behance" title="À compléter"><i class="fab fa-behance"></i></a>
             </div>
         </div>
     </section>
 
-    <!-- ===== PORTFOLIO ===== -->
+    <!-- SERVICES -->
+    <section class="section" id="services">
+        <div class="container">
+            <h2 class="section-title">Mes Services</h2>
+            <p class="section-subtitle">
+                Une gamme complète de services de design graphique pour vos besoins professionnels
+            </p>
+            <div class="services-grid">
+                <div class="service-card">
+                    <span class="icon">🎯</span>
+                    <h3>Logo Design</h3>
+                    <p>Création de logos uniques et mémorables qui représentent l'essence de votre marque et marquent les esprits.</p>
+                </div>
+
+                <div class="service-card">
+                    <span class="icon">🎨</span>
+                    <h3>Branding Complet</h3>
+                    <p>Développement complet de votre identité visuelle incluant logo, palette de couleurs, typographie et guidelines.</p>
+                </div>
+
+                <div class="service-card">
+                    <span class="icon">📄</span>
+                    <h3>Affiches & Flyers</h3>
+                    <p>Design d'affiches percutantes et flyers attractifs pour vos événements, promotions et campagnes marketing.</p>
+                </div>
+
+                <div class="service-card">
+                    <span class="icon">⚽</span>
+                    <h3>Design Sportif</h3>
+                    <p>Création d'équipements sportifs, maillots, logos d'équipes et identité visuelle pour le secteur sportif.</p>
+                </div>
+
+                <div class="service-card">
+                    <span class="icon">📦</span>
+                    <h3>Emballage & Packaging</h3>
+                    <p>Conception d'emballages esthétiques et fonctionnels qui reflètent la qualité de vos produits.</p>
+                </div>
+
+                <div class="service-card">
+                    <span class="icon">✨</span>
+                    <h3>Et bien plus...</h3>
+                    <p>Design social media, illustrations, retouche photo et services de design personnalisés selon vos besoins.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PORTFOLIO -->
     <section class="section" id="portfolio">
         <div class="container">
-            <h2 class="section-title">Mes créations</h2>
+            <h2 class="section-title">Mon Portfolio</h2>
             <p class="section-subtitle">
-                Une sélection de mes projets récents en design graphique, branding
-                et création de contenu visuel.
+                Découvrez une sélection de mes projets récents et réalisations
             </p>
-            <div class="portfolio-tags">
-                <span class="active">Tout</span>
-                <span>Branding</span>
-                <span>Réseaux sociaux</span>
-                <span>Motion design</span>
-                <span>Print</span>
-            </div>
+            
             <div class="portfolio-grid">
                 <div class="portfolio-item">
-                    <div class="placeholder-img">
-                        <i class="fas fa-paint-brush"></i>
-                    </div>
-                    <div class="portfolio-overlay">
-                        <h3>Branding — Projet Alpha</h3>
-                        <p>Identité visuelle complète</p>
-                    </div>
-                </div>
-                <div class="portfolio-item">
-                    <div class="placeholder-img">
-                        <i class="fas fa-palette"></i>
-                    </div>
-                    <div class="portfolio-overlay">
-                        <h3>Social Media — Série Créative</h3>
-                        <p>Contenu Instagram & LinkedIn</p>
-                    </div>
-                </div>
-                <div class="portfolio-item">
-                    <div class="placeholder-img">
-                        <i class="fas fa-play-circle"></i>
-                    </div>
-                    <div class="portfolio-overlay">
-                        <h3>Motion Design — Reel</h3>
-                        <p>Animation & montage vidéo</p>
-                    </div>
-                </div>
-                <div class="portfolio-item">
-                    <div class="placeholder-img">
+                    <div class="portfolio-placeholder">
                         <i class="fas fa-image"></i>
+                        <p>Projet 1</p>
                     </div>
                     <div class="portfolio-overlay">
-                        <h3>Affiche — Édition Limitée</h3>
-                        <p>Design print & typographie</p>
+                        <h3>Votre Projet</h3>
+                        <p>À ajouter</p>
                     </div>
                 </div>
+
                 <div class="portfolio-item">
-                    <div class="placeholder-img">
-                        <i class="fas fa-mobile-alt"></i>
+                    <div class="portfolio-placeholder">
+                        <i class="fas fa-image"></i>
+                        <p>Projet 2</p>
                     </div>
                     <div class="portfolio-overlay">
-                        <h3>UI/UX — App Concept</h3>
-                        <p>Design d'interface mobile</p>
+                        <h3>Votre Projet</h3>
+                        <p>À ajouter</p>
                     </div>
                 </div>
+
                 <div class="portfolio-item">
-                    <div class="placeholder-img">
-                        <i class="fas fa-camera"></i>
+                    <div class="portfolio-placeholder">
+                        <i class="fas fa-image"></i>
+                        <p>Projet 3</p>
                     </div>
                     <div class="portfolio-overlay">
-                        <h3>Packshot — Produit</h3>
-                        <p>Photographie & retouche</p>
+                        <h3>Votre Projet</h3>
+                        <p>À ajouter</p>
                     </div>
                 </div>
+
+                <div class="portfolio-item">
+                    <div class="portfolio-placeholder">
+                        <i class="fas fa-image"></i>
+                        <p>Projet 4</p>
+                    </div>
+                    <div class="portfolio-overlay">
+                        <h3>Votre Projet</h3>
+                        <p>À ajouter</p>
+                    </div>
+                </div>
+
+                <div class="portfolio-item">
+                    <div class="portfolio-placeholder">
+                        <i class="fas fa-image"></i>
+                        <p>Projet 5</p>
+                    </div>
+                    <div class="portfolio-overlay">
+                        <h3>Votre Projet</h3>
+                        <p>À ajouter</p>
+                    </div>
+                </div>
+
+                <div class="portfolio-item">
+                    <div class="portfolio-placeholder">
+                        <i class="fas fa-image"></i>
+                        <p>Projet 6</p>
+                    </div>
+                    <div class="portfolio-overlay">
+                        <h3>Votre Projet</h3>
+                        <p>À ajouter</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="empty-state" style="margin-top: 48px;">
+                <i class="fas fa-cloud-upload-alt"></i>
+                <p><strong>Ajoutez vos projets au portfolio</strong></p>
+                <p style="font-size: 0.9rem; color: #666;">Téléchargez les images de vos réalisations pour compléter votre portfolio</p>
             </div>
         </div>
     </section>
 
-    <!-- ===== BLOG ===== -->
-    <section class="section" id="blog">
-        <div class="container">
-            <h2 class="section-title">Derniers articles</h2>
-            <p class="section-subtitle">
-                Astuces, tutoriels et réflexions sur le design graphique,
-                la création de contenu visuel et la vie de créatif.
-            </p>
-            <div class="blog-grid">
-                <article class="blog-card">
-                    <div class="blog-card-img">
-                        <i class="fas fa-newspaper"></i>
-                    </div>
-                    <div class="blog-card-body">
-                        <div class="date">15 juillet 2026</div>
-                        <h3>5 tendances du design graphique à suivre en 2026</h3>
-                        <p>
-                            Découvrez les couleurs, typographies et styles qui
-                            dominent le paysage visuel cette année.
-                        </p>
-                        <a href="#">Lire l'article →</a>
-                    </div>
-                </article>
-                <article class="blog-card">
-                    <div class="blog-card-img">
-                        <i class="fas fa-lightbulb"></i>
-                    </div>
-                    <div class="blog-card-body">
-                        <div class="date">2 juillet 2026</div>
-                        <h3>Comment structurer une identité visuelle cohérente</h3>
-                        <p>
-                            Les étapes clés pour créer une charte graphique
-                            qui parle à votre audience.
-                        </p>
-                        <a href="#">Lire l'article →</a>
-                    </div>
-                </article>
-                <article class="blog-card">
-                    <div class="blog-card-img">
-                        <i class="fas fa-tools"></i>
-                    </div>
-                    <div class="blog-card-body">
-                        <div class="date">18 juin 2026</div>
-                        <h3>Les outils indispensables du créateur de contenu</h3>
-                        <p>
-                            Ma sélection des logiciels et applications pour
-                            booster votre productivité créative.
-                        </p>
-                        <a href="#">Lire l'article →</a>
-                    </div>
-                </article>
-            </div>
-        </div>
-    </section>
-
-    <!-- ===== ABOUT ===== -->
+    <!-- ABOUT -->
     <section class="section" id="about">
         <div class="container about-wrap">
             <div class="about-image">
-                <i class="fas fa-user-astronaut"></i>
+                <i class="fas fa-user-circle"></i>
             </div>
             <div class="about-text">
-                <h2>À propos de moi</h2>
-                <p class="lead">Designer graphique & Créateur de contenu visuel</p>
+                <h2>À Propos de Moi</h2>
+                <p class="lead">Nkilusisa Salomão Lutati - DSKILUSHANG DESIGNER</p>
                 <p>
-                    Je suis passionné par la création d'images qui racontent une
-                    histoire. Depuis plus de 2 ans, j'accompagne des marques et
-                    des entrepreneurs à donner vie à leur univers visuel.
+                    Je suis un designer graphique passionné par la création d'identités visuelles 
+                    fortes et mémorables. Basé à Luanda, Angola, j'apporte mon expérience et ma créativité 
+                    à chaque projet que je réalise.
                 </p>
                 <p>
-                    Du branding à la conception de contenu pour les réseaux
-                    sociaux, en passant par le motion design, chaque projet est
-                    une nouvelle aventure créative que j'aborde avec rigueur
-                    et passion.
+                    Mon approche repose sur l'écoute, la compréhension de vos besoins et la 
+                    traduction de vos idées en solutions visuelles professionnelles et efficaces. 
+                    Chaque projet est une nouvelle opportunité de créer quelque chose de remarquable.
                 </p>
                 <div class="about-stats">
                     <div class="stat">
-                        <h4>50+</h4>
+                        <h4>15+</h4>
                         <p>Projets réalisés</p>
                     </div>
                     <div class="stat">
-                        <h4>30+</h4>
+                        <h4>10+</h4>
                         <p>Clients satisfaits</p>
                     </div>
                     <div class="stat">
-                        <h4>2+ ans</h4>
+                        <h4>3+ ans</h4>
                         <p>D'expérience</p>
                     </div>
                 </div>
@@ -727,105 +769,115 @@
         </div>
     </section>
 
-    <!-- ===== SERVICES ===== -->
-    <section class="section" id="services">
-        <div class="container">
-            <h2 class="section-title">Mes services</h2>
-            <p class="section-subtitle">
-                Ce que je peux faire pour vous et votre marque.
-            </p>
-            <div class="services-grid">
-                <div class="service-card">
-                    <i class="fas fa-bezier-curve"></i>
-                    <h3>Identité visuelle & Branding</h3>
-                    <p>Logo, charte graphique, papier entête — une identité forte et cohérente.</p>
-                </div>
-                <div class="service-card">
-                    <i class="fas fa-hashtag"></i>
-                    <h3>Contenu réseaux sociaux</h3>
-                    <p>Visuels, templates, stories et publications pour vos plateformes.</p>
-                </div>
-                <div class="service-card">
-                    <i class="fas fa-video"></i>
-                    <h3>Motion design</h3>
-                    <p>Animations, reels, vidéos courtes et habillage dynamique.</p>
-                </div>
-                <div class="service-card">
-                    <i class="fas fa-print"></i>
-                    <h3>Design print</h3>
-                    <p>Flyers, affiches, cartes de visite, brochures et goodies.</p>
-                </div>
-                <div class="service-card">
-                    <i class="fas fa-crop-alt"></i>
-                    <h3>Retouche & Photographie</h3>
-                    <p>Retouche photo, colorimétrie, montage et optimisation visuelle.</p>
-                </div>
-                <div class="service-card">
-                    <i class="fas fa-pencil-ruler"></i>
-                    <h3>Direction artistique</h3>
-                    <p>Conseil et stratégie visuelle pour vos campagnes et projets.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ===== CONTACT ===== -->
+    <!-- CONTACT -->
     <section class="section" id="contact">
         <div class="container contact-wrap">
             <div class="contact-info">
-                <h2 class="section-title" style="margin-bottom: 12px;">Travaillons ensemble</h2>
+                <h2 class="section-title" style="margin-bottom: 12px;">Travaillons Ensemble</h2>
                 <p>
-                    Vous avez un projet en tête ? Une question ? Envoyez-moi un
-                    message et je vous répondrai dans les plus brefs délais.
+                    Vous avez un projet en tête ? Une question sur mes services ? 
+                    N'hésitez pas à me contacter. Je serai ravi de discuter de votre vision 
+                    et de la transformer en réalité.
                 </p>
-                <div class="contact-item">
-                    <i class="fas fa-envelope"></i>
-                    <div>
-                        <h4>Email</h4>
-                        <p>contact@monportfolio.com</p>
-                    </div>
-                </div>
-                <div class="contact-item">
-                    <i class="fas fa-phone-alt"></i>
-                    <div>
-                        <h4>Téléphone</h4>
-                        <p>+243 800 000 000</p>
-                    </div>
-                </div>
+
                 <div class="contact-item">
                     <i class="fas fa-map-marker-alt"></i>
                     <div>
                         <h4>Localisation</h4>
-                        <p>Kinshasa, RDC</p>
+                        <p>Luanda, Angola</p>
+                    </div>
+                </div>
+
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <div>
+                        <h4>Email</h4>
+                        <p><a href="mailto:danielkilusisa@gmail.com">À compléter</a></p>
+                    </div>
+                </div>
+
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <div>
+                        <h4>Téléphone</h4>
+                        <p><a href="tel:+244">À compléter</a></p>
+                    </div>
+                </div>
+
+                <div class="contact-item">
+                    <i class="fas fa-comments"></i>
+                    <div>
+                        <h4>WhatsApp</h4>
+                        <p><a href="https://wa.me/" target="_blank">À compléter</a></p>
+                    </div>
+                </div>
+
+                <div style="margin-top: 32px; padding-top: 32px; border-top: 1px solid rgba(255,255,255,0.05);">
+                    <h4 style="margin-bottom: 16px; font-weight: 700;">Me Suivre</h4>
+                    <div style="display: flex; gap: 16px;">
+                        <a href="#" title="Instagram" style="width: 44px; height: 44px; border-radius: 50%; background: rgba(192,132,252,0.1); display: flex; align-items: center; justify-content: center; color: #c084fc; transition: 0.3s;" onmouseover="this.style.background='rgba(192,132,252,0.2)'" onmouseout="this.style.background='rgba(192,132,252,0.1)'">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" title="LinkedIn" style="width: 44px; height: 44px; border-radius: 50%; background: rgba(192,132,252,0.1); display: flex; align-items: center; justify-content: center; color: #c084fc; transition: 0.3s;" onmouseover="this.style.background='rgba(192,132,252,0.2)'" onmouseout="this.style.background='rgba(192,132,252,0.1)'">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" title="Behance" style="width: 44px; height: 44px; border-radius: 50%; background: rgba(192,132,252,0.1); display: flex; align-items: center; justify-content: center; color: #c084fc; transition: 0.3s;" onmouseover="this.style.background='rgba(192,132,252,0.2)'" onmouseout="this.style.background='rgba(192,132,252,0.1)'">
+                            <i class="fab fa-behance"></i>
+                        </a>
+                        <a href="#" title="Twitter/X" style="width: 44px; height: 44px; border-radius: 50%; background: rgba(192,132,252,0.1); display: flex; align-items: center; justify-content: center; color: #c084fc; transition: 0.3s;" onmouseover="this.style.background='rgba(192,132,252,0.2)'" onmouseout="this.style.background='rgba(192,132,252,0.1)'">
+                            <i class="fab fa-x-twitter"></i>
+                        </a>
                     </div>
                 </div>
             </div>
-            <form class="contact-form">
+
+            <form class="contact-form" id="contactForm">
                 <input type="text" placeholder="Votre nom" required />
                 <input type="email" placeholder="Votre email" required />
-                <input type="text" placeholder="Sujet" />
-                <textarea placeholder="Votre message..." required></textarea>
+                <input type="text" placeholder="Sujet de votre message" required />
+                <textarea placeholder="Décrivez votre projet ou votre demande..." required></textarea>
                 <button type="submit" class="btn btn-primary">Envoyer le message</button>
             </form>
         </div>
     </section>
 
-    <!-- ===== FOOTER ===== -->
+    <!-- FOOTER -->
     <footer>
         <div class="container">
-            <p>&copy; 2026 MonPortfolio. Tous droits réservés.</p>
-            <div class="social">
-                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                <a href="#" aria-label="Behance"><i class="fab fa-behance"></i></a>
-                <a href="#" aria-label="Dribbble"><i class="fab fa-dribbble"></i></a>
-                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>DSKILUSHANG DESIGNER</h4>
+                    <p>Designer graphique professionnel basé à Luanda, Angola. Spécialisé en branding, logo design et création graphique de qualité.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Navigation</h4>
+                    <ul>
+                        <li><a href="#home">Accueil</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#portfolio">Portfolio</a></li>
+                        <li><a href="#about">À propos</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="#services">Logo Design</a></li>
+                        <li><a href="#services">Branding Complet</a></li>
+                        <li><a href="#services">Design Sportif</a></li>
+                        <li><a href="#services">Packaging</a></li>
+                        <li><a href="#services">Et bien plus...</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 DSKILUSHANG DESIGNER. Tous droits réservés. | Luanda, Angola</p>
             </div>
         </div>
     </footer>
 
-    <!-- ===== JAVASCRIPT ===== -->
     <script>
-        // — Menu mobile
+        // Menu mobile
         const toggle = document.getElementById('menuToggle');
         const navLinks = document.getElementById('navLinks');
         toggle.addEventListener('click', () => {
@@ -843,32 +895,30 @@
             });
         });
 
-        // — Header scroll
+        // Header scroll
         window.addEventListener('scroll', () => {
             const header = document.getElementById('header');
             header.classList.toggle('scrolled', window.scrollY > 50);
         });
 
-        // — Portfolio tags filter (simple demo)
-        document.querySelectorAll('.portfolio-tags span').forEach(tag => {
-            tag.addEventListener('click', function () {
-                document.querySelectorAll('.portfolio-tags span').forEach(t => t.classList.remove('active'));
-                this.classList.add('active');
-            });
-        });
-
-        // — Contact form (empêche la vraie soumission, affiche un message)
-        document.querySelector('.contact-form').addEventListener('submit', function (e) {
+        // Contact form
+        document.getElementById('contactForm').addEventListener('submit', function (e) {
             e.preventDefault();
             const btn = this.querySelector('.btn');
             const original = btn.textContent;
-            btn.textContent = '✅ Message envoyé !';
-            btn.style.background = 'linear-gradient(135deg, #34d399, #10b981)';
+            btn.textContent = '✅ Message en cours d\'envoi...';
+            btn.disabled = true;
+            
             setTimeout(() => {
-                btn.textContent = original;
-                btn.style.background = '';
-                this.reset();
-            }, 3000);
+                btn.textContent = '✅ Message envoyé avec succès !';
+                btn.style.background = 'linear-gradient(135deg, #34d399, #10b981)';
+                setTimeout(() => {
+                    btn.textContent = original;
+                    btn.style.background = '';
+                    btn.disabled = false;
+                    this.reset();
+                }, 3000);
+            }, 1500);
         });
     </script>
 
