@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
+    <!-- last-deploy: 2026-08-18T00:12:00Z -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="DSKILUSHANG DESIGNER - Logo, Branding, Affiches, Design Sportif et bien plus. Designer professionnel basé à Luanda, Angola." />
@@ -321,62 +322,4 @@
                         <li><a href="#services">Logo Design</a></li>
                         <li><a href="#services">Branding Complet</a></li>
                         <li><a href="#services">Design Sportif</a></li>
-                        <li><a href="#services">Packaging</a></li>
-                        <li><a href="#services">Et bien plus...</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2026 DSKILUSHANG DESIGNER. Tous droits réservés. | Luanda, Angola</p>
-            </div>
-        </div>
-    </footer>
-
-    <script>
-        // Menu mobile
-        const toggle = document.getElementById('menuToggle');
-        const navLinks = document.getElementById('navLinks');
-        toggle.addEventListener('click', () => {
-            navLinks.classList.toggle('open');
-            const icon = toggle.querySelector('i');
-            icon.classList.toggle('fa-bars');
-            icon.classList.toggle('fa-times');
-        });
-        document.querySelectorAll('.nav-links a').forEach(link => {
-            link.addEventListener('click', () => {
-                navLinks.classList.remove('open');
-                const icon = toggle.querySelector('i');
-                icon.classList.add('fa-bars');
-                icon.classList.remove('fa-times');
-            });
-        });
-
-        // Header scroll
-        window.addEventListener('scroll', () => {
-            const header = document.getElementById('header');
-            header.classList.toggle('scrolled', window.scrollY > 50);
-        });
-
-        // Contact form
-        document.getElementById('contactForm').addEventListener('submit', function (e) {
-            e.preventDefault();
-            const btn = this.querySelector('.btn');
-            const original = btn.textContent;
-            btn.textContent = '✅ Message en cours d\'envoi...';
-            btn.disabled = true;
-            
-            setTimeout(() => {
-                btn.textContent = '✅ Message envoyé avec succès !';
-                btn.style.background = 'linear-gradient(135deg, #34d399, #10b981)';
-                setTimeout(() => {
-                    btn.textContent = original;
-                    btn.style.background = '';
-                    btn.disabled = false;
-                    this.reset();
-                }, 3000);
-            }, 1500);
-        });
-    </script>
-
-</body>
-</html>
+{
