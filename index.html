@@ -1,325 +1,170 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <!-- last-deploy: 2026-08-18T00:12:00Z -->
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="DSKILUSHANG DESIGNER - Logo, Branding, Affiches, Design Sportif et bien plus. Designer professionnel basé à Luanda, Angola." />
-    <meta name="keywords" content="designer, logo, branding, affiche, design graphique, Angola, Luanda" />
-    <meta name="author" content="Nkilusisa Salomão Lutati" />
-    <title>DSKILUSHANG DESIGNER | Design Graphique Professionnel</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DSKILUSHANG | Portfolio & Design</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- HEADER -->
-    <header id="header">
+    <!-- NAVIGATEUR -->
+    <header>
+        <div class="logo">DSKILUSHANG</div>
         <nav>
-            <div class="logo">DSKILUSHANG</div>
-            <button class="menu-toggle" id="menuToggle" aria-label="Menu">
-                <i class="fas fa-bars"></i>
-            </button>
-            <ul class="nav-links" id="navLinks">
-                <li><a href="#home">Accueil</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#portfolio">Portfolio</a></li>
-                <li><a href="#about">À propos</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
+            <a href="#portfolio">Portfolio</a>
+            <a href="#youtube">YouTube</a>
+            <a href="#espace-client">Espace Client</a>
+            <a href="#contact">Contact</a>
         </nav>
     </header>
 
-    <!-- HERO -->
-    <section class="hero" id="home">
-        <div class="container hero-content">
-            <div class="badge">🎨 Designer Créatif Professionnel</div>
-            <h1>
-                Transformez vos <br>
-                <span class="highlight">idées en réalité visuelle</span>
-            </h1>
-            <p>
-                Designer graphique basé à Luanda, Angola. Spécialisé en branding, design sportif, 
-                affiches et bien plus. Créons ensemble votre identité visuelle unique.
-            </p>
-            <div class="hero-btns">
-                <a href="#portfolio" class="btn btn-primary">Voir mon portfolio</a>
-                <a href="#contact" class="btn btn-outline">Me contacter</a>
+    <!-- ACCUEIL (HERO) -->
+    <section class="hero">
+        <h1>Graphiste Designer & Créateur de Contenu</h1>
+        <p>Donnez de la valeur à votre marque avec des visuels uniques et percutants.</p>
+        <div class="hero-buttons">
+            <a href="#portfolio" class="btn secondary">Voir mes créations</a>
+            <a href="#contact" class="btn">Me contacter</a>
+        </div>
+    </section>
+
+    <!-- PORTFOLIO INTERACTIF -->
+    <section id="portfolio" class="portfolio">
+        <h2>Mon Univers Visuel</h2>
+        
+        <div class="filter-buttons">
+            <button class="filter-btn active" data-filter="all">Tout</button>
+            <button class="filter-btn" data-filter="logo">Logos</button>
+            <button class="filter-btn" data-filter="print">Affiches / Print</button>
+            <button class="filter-btn" data-filter="social">Réseaux Sociaux</button>
+        </div>
+
+        <div class="grid-portfolio">
+            <div class="projet-card" data-category="logo">
+                <div class="projet-image" onclick="openLightbox('https://picsum.photos', 'Identité Visuelle - Logo Premium', 'Création d\'un logo épuré et d\'une charte graphique complète pour une marque moderne.')">
+                    <img src="https://picsum.photos" alt="Logo">
+                </div>
+                <h3>Identité Visuelle</h3>
+                <p>Catégorie : Logo</p>
             </div>
-            <div class="hero-social">
-                <a href="#" aria-label="Instagram" title="À compléter"><i class="fab fa-instagram"></i></a>
-                <a href="#" aria-label="WhatsApp" title="À compléter"><i class="fab fa-whatsapp"></i></a>
-                <a href="#" aria-label="LinkedIn" title="À compléter"><i class="fab fa-linkedin-in"></i></a>
-                <a href="#" aria-label="Behance" title="À compléter"><i class="fab fa-behance"></i></a>
+
+            <div class="projet-card" data-category="print">
+                <div class="projet-image" onclick="openLightbox('https://picsum.photos', 'Affiche Événementielle', 'Conception d\'une affiche publicitaire grand format pour un festival.')">
+                    <img src="https://picsum.photos" alt="Affiche">
+                </div>
+                <h3>Affiche Publicitaire</h3>
+                <p>Catégorie : Print</p>
+            </div>
+
+            <div class="projet-card" data-category="social">
+                <div class="projet-image" onclick="openLightbox('https://picsum.photos', 'Pack Réseaux Sociaux', 'Création de templates Instagram et bannières YouTube harmonieuses.')">
+                    <img src="https://picsum.photos" alt="Réseaux">
+                </div>
+                <h3>Social Media Design</h3>
+                <p>Catégorie : Réseaux Sociaux</p>
             </div>
         </div>
     </section>
 
-    <!-- SERVICES -->
-    <section class="section" id="services">
-        <div class="container">
-            <h2 class="section-title">Mes Services</h2>
-            <p class="section-subtitle">
-                Une gamme complète de services de design graphique pour vos besoins professionnels
-            </p>
-            <div class="services-grid">
-                <div class="service-card">
-                    <span class="icon">🎯</span>
-                    <h3>Logo Design</h3>
-                    <p>Création de logos uniques et mémorables qui représentent l'essence de votre marque et marquent les esprits.</p>
-                </div>
+    <!-- FENÊTRE POP-UP (LIGHTBOX) -->
+    <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+        <span class="close-lightbox">&times;</span>
+        <div class="lightbox-content" onclick="event.stopPropagation()">
+            <img id="lightbox-img" src="" alt="Vue agrandie">
+            <h3 id="lightbox-title">Titre du projet</h3>
+            <p id="lightbox-desc">Description détaillée du projet.</p>
+        </div>
+    </div>
 
-                <div class="service-card">
-                    <span class="icon">🎨</span>
-                    <h3>Branding Complet</h3>
-                    <p>Développement complet de votre identité visuelle incluant logo, palette de couleurs, typographie et guidelines.</p>
-                </div>
+    <!-- CHAÎNE YOUTUBE -->
+    <section id="youtube" class="socials-section">
+        <h2>Dernière Vidéo YouTube</h2>
+        <p>Découvrez mes tutoriels design et mes vlogs créatifs.</p>
+        <div class="video-container">
+            <iframe src="https://youtube.com" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </section>
 
-                <div class="service-card">
-                    <span class="icon">📄</span>
-                    <h3>Affiches & Flyers</h3>
-                    <p>Design d'affiches percutantes et flyers attractifs pour vos événements, promotions et campagnes marketing.</p>
-                </div>
-
-                <div class="service-card">
-                    <span class="icon">⚽</span>
-                    <h3>Design Sportif</h3>
-                    <p>Création d'équipements sportifs, maillots, logos d'équipes et identité visuelle pour le secteur sportif.</p>
-                </div>
-
-                <div class="service-card">
-                    <span class="icon">📦</span>
-                    <h3>Emballage & Packaging</h3>
-                    <p>Conception d'emballages esthétiques et fonctionnels qui reflètent la qualité de vos produits.</p>
-                </div>
-
-                <div class="service-card">
-                    <span class="icon">✨</span>
-                    <h3>Et bien plus...</h3>
-                    <p>Design social media, illustrations, retouche photo et services de design personnalisés selon vos besoins.</p>
-                </div>
+    <!-- MARKETING & ESPACE CLIENT -->
+    <section id="espace-client" class="marketing-section">
+        <div class="marketing-grid">
+            <div class="marketing-box client-zone">
+                <h3>💼 Espace Client Sécurisé</h3>
+                <p>Vous êtes déjà client ? Accédez instantanément à votre dossier partagé pour valider vos livrables (Logos, formats HD, déclinaisons).</p>
+                <a href="#" target="_blank" class="btn">Accéder à mon espace</a>
+            </div>
+            <div class="marketing-box newsletter-zone">
+                <h3>📢 Des conseils Design gratuits ?</h3>
+                <p>Inscrivez-vous pour recevoir mes astuces visuelles et mes offres exclusives directement dans votre boîte mail.</p>
+                <form class="mini-form">
+                    <input type="email" placeholder="Votre meilleur email" required>
+                    <button type="submit" class="btn">S'inscrire</button>
+                </form>
             </div>
         </div>
     </section>
 
-    <!-- PORTFOLIO -->
-    <section class="section" id="portfolio">
-        <div class="container">
-            <h2 class="section-title">Mon Portfolio</h2>
-            <p class="section-subtitle">
-                Découvrez une sélection de mes projets récents et réalisations
-            </p>
+    <!-- CONTACT (Formulaire prêt pour FormSubmit) -->
+    <section id="contact" class="contact">
+        <h2>Démarrons un projet ensemble</h2>
+        <p class="contact-subtitle">Remplissez ce formulaire, je vous réponds sous 24h à 48h maximum.</p>
+        
+        <form action="https://formsubmit.co" method="POST">
+            <div class="form-row">
+                <input type="text" name="name" placeholder="Votre Nom complet" required>
+                <input type="email" name="email" placeholder="Votre Adresse Email" required>
+            </div>
+            <input type="text" name="subject" placeholder="Sujet de votre demande (ex: Création de Logo)" required>
+            <textarea name="message" rows="6" placeholder="Décrivez votre projet en quelques lignes..." required></textarea>
             
-            <div class="portfolio-grid">
-                <div class="portfolio-item">
-                    <div class="portfolio-placeholder">
-                        <i class="fas fa-image"></i>
-                        <p>Projet 1</p>
-                    </div>
-                    <div class="portfolio-overlay">
-                        <h3>Votre Projet</h3>
-                        <p>À ajouter</p>
-                    </div>
-                </div>
-
-                <div class="portfolio-item">
-                    <div class="portfolio-placeholder">
-                        <i class="fas fa-image"></i>
-                        <p>Projet 2</p>
-                    </div>
-                    <div class="portfolio-overlay">
-                        <h3>Votre Projet</h3>
-                        <p>À ajouter</p>
-                    </div>
-                </div>
-
-                <div class="portfolio-item">
-                    <div class="portfolio-placeholder">
-                        <i class="fas fa-image"></i>
-                        <p>Projet 3</p>
-                    </div>
-                    <div class="portfolio-overlay">
-                        <h3>Votre Projet</h3>
-                        <p>À ajouter</p>
-                    </div>
-                </div>
-
-                <div class="portfolio-item">
-                    <div class="portfolio-placeholder">
-                        <i class="fas fa-image"></i>
-                        <p>Projet 4</p>
-                    </div>
-                    <div class="portfolio-overlay">
-                        <h3>Votre Projet</h3>
-                        <p>À ajouter</p>
-                    </div>
-                </div>
-
-                <div class="portfolio-item">
-                    <div class="portfolio-placeholder">
-                        <i class="fas fa-image"></i>
-                        <p>Projet 5</p>
-                    </div>
-                    <div class="portfolio-overlay">
-                        <h3>Votre Projet</h3>
-                        <p>À ajouter</p>
-                    </div>
-                </div>
-
-                <div class="portfolio-item">
-                    <div class="portfolio-placeholder">
-                        <i class="fas fa-image"></i>
-                        <p>Projet 6</p>
-                    </div>
-                    <div class="portfolio-overlay">
-                        <h3>Votre Projet</h3>
-                        <p>À ajouter</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="empty-state" style="margin-top: 48px;">
-                <i class="fas fa-cloud-upload-alt"></i>
-                <p><strong>Ajoutez vos projets au portfolio</strong></p>
-                <p style="font-size: 0.9rem; color: #666;">Téléchargez les images de vos réalisations pour compléter votre portfolio</p>
-            </div>
-        </div>
+            <input type="hidden" name="_next" value="https://github.io">
+            <button type="submit" class="btn large">Envoyer ma demande</button>
+        </form>
     </section>
 
-    <!-- ABOUT -->
-    <section class="section" id="about">
-        <div class="container about-wrap">
-            <div class="about-image">
-                <i class="fas fa-user-circle"></i>
-            </div>
-            <div class="about-text">
-                <h2>À Propos de Moi</h2>
-                <p class="lead">Nkilusisa Salomão Lutati - DSKILUSHANG DESIGNER</p>
-                <p>
-                    Je suis un designer graphique passionné par la création d'identités visuelles 
-                    fortes et mémorables. Basé à Luanda, Angola, j'apporte mon expérience et ma créativité 
-                    à chaque projet que je réalise.
-                </p>
-                <p>
-                    Mon approche repose sur l'écoute, la compréhension de vos besoins et la 
-                    traduction de vos idées en solutions visuelles professionnelles et efficaces. 
-                    Chaque projet est une nouvelle opportunité de créer quelque chose de remarquable.
-                </p>
-                <div class="about-stats">
-                    <div class="stat">
-                        <h4>15+</h4>
-                        <p>Projets réalisés</p>
-                    </div>
-                    <div class="stat">
-                        <h4>10+</h4>
-                        <p>Clients satisfaits</p>
-                    </div>
-                    <div class="stat">
-                        <h4>3+ ans</h4>
-                        <p>D'expérience</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- CONTACT -->
-    <section class="section" id="contact">
-        <div class="container contact-wrap">
-            <div class="contact-info">
-                <h2 class="section-title" style="margin-bottom: 12px;">Travaillons Ensemble</h2>
-                <p>
-                    Vous avez un projet en tête ? Une question sur mes services ? 
-                    N'hésitez pas à me contacter. Je serai ravi de discuter de votre vision 
-                    et de la transformer en réalité.
-                </p>
-
-                <div class="contact-item">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <div>
-                        <h4>Localisation</h4>
-                        <p>Luanda, Angola</p>
-                    </div>
-                </div>
-
-                <div class="contact-item">
-                    <i class="fas fa-envelope"></i>
-                    <div>
-                        <h4>Email</h4>
-                        <p><a href="mailto:danielkilusisa@gmail.com">À compléter</a></p>
-                    </div>
-                </div>
-
-                <div class="contact-item">
-                    <i class="fas fa-phone"></i>
-                    <div>
-                        <h4>Téléphone</h4>
-                        <p><a href="tel:+244">À compléter</a></p>
-                    </div>
-                </div>
-
-                <div class="contact-item">
-                    <i class="fas fa-comments"></i>
-                    <div>
-                        <h4>WhatsApp</h4>
-                        <p><a href="https://wa.me/" target="_blank">À compléter</a></p>
-                    </div>
-                </div>
-
-                <div style="margin-top: 32px; padding-top: 32px; border-top: 1px solid rgba(255,255,255,0.05);">
-                    <h4 style="margin-bottom: 16px; font-weight: 700;">Me Suivre</h4>
-                    <div style="display: flex; gap: 16px;">
-                        <a href="#" title="Instagram" style="width: 44px; height: 44px; border-radius: 50%; background: rgba(192,132,252,0.1); display: flex; align-items: center; justify-content: center;">
-                            <i class="fab fa-instagram"></i>
-                        </a>
-                        <a href="#" title="LinkedIn" style="width: 44px; height: 44px; border-radius: 50%; background: rgba(192,132,252,0.1); display: flex; align-items: center; justify-content: center;">
-                            <i class="fab fa-linkedin-in"></i>
-                        </a>
-                        <a href="#" title="Behance" style="width: 44px; height: 44px; border-radius: 50%; background: rgba(192,132,252,0.1); display: flex; align-items: center; justify-content: center;">
-                            <i class="fab fa-behance"></i>
-                        </a>
-                        <a href="#" title="Twitter/X" style="width: 44px; height: 44px; border-radius: 50%; background: rgba(192,132,252,0.1); display: flex; align-items: center; justify-content: center;">
-                            <i class="fab fa-x-twitter"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <form class="contact-form" id="contactForm">
-                <input type="text" placeholder="Votre nom" required />
-                <input type="email" placeholder="Votre email" required />
-                <input type="text" placeholder="Sujet de votre message" required />
-                <textarea placeholder="Décrivez votre projet ou votre demande..." required></textarea>
-                <button type="submit" class="btn btn-primary">Envoyer le message</button>
-            </form>
-        </div>
-    </section>
-
-    <!-- FOOTER -->
+    <!-- PIED DE PAGE -->
     <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h4>DSKILUSHANG DESIGNER</h4>
-                    <p>Designer graphique professionnel basé à Luanda, Angola. Spécialisé en branding, logo design et création graphique de qualité.</p>
-                </div>
-                <div class="footer-section">
-                    <h4>Navigation</h4>
-                    <ul>
-                        <li><a href="#home">Accueil</a></li>
-                        <li><a href="#services">Services</a></li>
-                        <li><a href="#portfolio">Portfolio</a></li>
-                        <li><a href="#about">À propos</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Services</h4>
-                    <ul>
-                        <li><a href="#services">Logo Design</a></li>
-                        <li><a href="#services">Branding Complet</a></li>
-                        <li><a href="#services">Design Sportif</a></li>
-{
+        <div class="footer-socials">
+            <a href="#" target="_blank">YouTube</a>
+            <a href="#" target="_blank">Instagram</a>
+            <a href="#" target="_blank">Behance</a>
+            <a href="#" target="_blank">TikTok</a>
+        </div>
+        <p>&copy; 2026 DSKILUSHANG. Tous droits réservés.</p>
+    </footer>
+
+    <!-- SCRIPT JAVASCRIPT COMPLET -->
+    <script>
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const cards = document.querySelectorAll('.projet-card');
+
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                document.querySelector('.filter-btn.active').classList.remove('active');
+                button.classList.add('active');
+
+                const filterValue = button.getAttribute('data-filter');
+                cards.forEach(card => {
+                    if (filterValue === 'all' || card.getAttribute('data-category') === filterValue) {
+                        card.style.display = 'block';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        function openLightbox(imgSrc, title, description) {
+            document.getElementById('lightbox-img').src = imgSrc;
+            document.getElementById('lightbox-title').innerText = title;
+            document.getElementById('lightbox-desc').innerText = description;
+            document.getElementById('lightbox').classList.add('active');
+        }
+
+        function closeLightbox() {
+            document.getElementById('lightbox').classList.remove('active');
+        }
+    </script>
+</body>
+</html>
