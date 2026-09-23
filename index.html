@@ -1,170 +1,21 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DSKILUSHANG | Portfolio & Design</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="DSKILUSHANG DESIGNER — identités visuelles, logos et contenus qui marquent les esprits.">
+<title>DSKILUSHANG DESIGNER — Identités visuelles</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-    <!-- NAVIGATEUR -->
-    <header>
-        <div class="logo">DSKILUSHANG</div>
-        <nav>
-            <a href="#portfolio">Portfolio</a>
-            <a href="#youtube">YouTube</a>
-            <a href="#espace-client">Espace Client</a>
-            <a href="#contact">Contact</a>
-        </nav>
-    </header>
-
-    <!-- ACCUEIL (HERO) -->
-    <section class="hero">
-        <h1>Graphiste Designer & Créateur de Contenu</h1>
-        <p>Donnez de la valeur à votre marque avec des visuels uniques et percutants.</p>
-        <div class="hero-buttons">
-            <a href="#portfolio" class="btn secondary">Voir mes créations</a>
-            <a href="#contact" class="btn">Me contacter</a>
-        </div>
-    </section>
-
-    <!-- PORTFOLIO INTERACTIF -->
-    <section id="portfolio" class="portfolio">
-        <h2>Mon Univers Visuel</h2>
-        
-        <div class="filter-buttons">
-            <button class="filter-btn active" data-filter="all">Tout</button>
-            <button class="filter-btn" data-filter="logo">Logos</button>
-            <button class="filter-btn" data-filter="print">Affiches / Print</button>
-            <button class="filter-btn" data-filter="social">Réseaux Sociaux</button>
-        </div>
-
-        <div class="grid-portfolio">
-            <div class="projet-card" data-category="logo">
-                <div class="projet-image" onclick="openLightbox('https://picsum.photos', 'Identité Visuelle - Logo Premium', 'Création d\'un logo épuré et d\'une charte graphique complète pour une marque moderne.')">
-                    <img src="https://picsum.photos" alt="Logo">
-                </div>
-                <h3>Identité Visuelle</h3>
-                <p>Catégorie : Logo</p>
-            </div>
-
-            <div class="projet-card" data-category="print">
-                <div class="projet-image" onclick="openLightbox('https://picsum.photos', 'Affiche Événementielle', 'Conception d\'une affiche publicitaire grand format pour un festival.')">
-                    <img src="https://picsum.photos" alt="Affiche">
-                </div>
-                <h3>Affiche Publicitaire</h3>
-                <p>Catégorie : Print</p>
-            </div>
-
-            <div class="projet-card" data-category="social">
-                <div class="projet-image" onclick="openLightbox('https://picsum.photos', 'Pack Réseaux Sociaux', 'Création de templates Instagram et bannières YouTube harmonieuses.')">
-                    <img src="https://picsum.photos" alt="Réseaux">
-                </div>
-                <h3>Social Media Design</h3>
-                <p>Catégorie : Réseaux Sociaux</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- FENÊTRE POP-UP (LIGHTBOX) -->
-    <div id="lightbox" class="lightbox" onclick="closeLightbox()">
-        <span class="close-lightbox">&times;</span>
-        <div class="lightbox-content" onclick="event.stopPropagation()">
-            <img id="lightbox-img" src="" alt="Vue agrandie">
-            <h3 id="lightbox-title">Titre du projet</h3>
-            <p id="lightbox-desc">Description détaillée du projet.</p>
-        </div>
-    </div>
-
-    <!-- CHAÎNE YOUTUBE -->
-    <section id="youtube" class="socials-section">
-        <h2>Dernière Vidéo YouTube</h2>
-        <p>Découvrez mes tutoriels design et mes vlogs créatifs.</p>
-        <div class="video-container">
-            <iframe src="https://youtube.com" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>
-    </section>
-
-    <!-- MARKETING & ESPACE CLIENT -->
-    <section id="espace-client" class="marketing-section">
-        <div class="marketing-grid">
-            <div class="marketing-box client-zone">
-                <h3>💼 Espace Client Sécurisé</h3>
-                <p>Vous êtes déjà client ? Accédez instantanément à votre dossier partagé pour valider vos livrables (Logos, formats HD, déclinaisons).</p>
-                <a href="#" target="_blank" class="btn">Accéder à mon espace</a>
-            </div>
-            <div class="marketing-box newsletter-zone">
-                <h3>📢 Des conseils Design gratuits ?</h3>
-                <p>Inscrivez-vous pour recevoir mes astuces visuelles et mes offres exclusives directement dans votre boîte mail.</p>
-                <form class="mini-form">
-                    <input type="email" placeholder="Votre meilleur email" required>
-                    <button type="submit" class="btn">S'inscrire</button>
-                </form>
-            </div>
-        </div>
-    </section>
-
-    <!-- CONTACT (Formulaire prêt pour FormSubmit) -->
-    <section id="contact" class="contact">
-        <h2>Démarrons un projet ensemble</h2>
-        <p class="contact-subtitle">Remplissez ce formulaire, je vous réponds sous 24h à 48h maximum.</p>
-        
-        <form action="https://formsubmit.co" method="POST">
-            <div class="form-row">
-                <input type="text" name="name" placeholder="Votre Nom complet" required>
-                <input type="email" name="email" placeholder="Votre Adresse Email" required>
-            </div>
-            <input type="text" name="subject" placeholder="Sujet de votre demande (ex: Création de Logo)" required>
-            <textarea name="message" rows="6" placeholder="Décrivez votre projet en quelques lignes..." required></textarea>
-            
-            <input type="hidden" name="_next" value="https://github.io">
-            <button type="submit" class="btn large">Envoyer ma demande</button>
-        </form>
-    </section>
-
-    <!-- PIED DE PAGE -->
-    <footer>
-        <div class="footer-socials">
-            <a href="#" target="_blank">YouTube</a>
-            <a href="#" target="_blank">Instagram</a>
-            <a href="#" target="_blank">Behance</a>
-            <a href="#" target="_blank">TikTok</a>
-        </div>
-        <p>&copy; 2026 DSKILUSHANG. Tous droits réservés.</p>
-    </footer>
-
-    <!-- SCRIPT JAVASCRIPT COMPLET -->
-    <script>
-        const filterButtons = document.querySelectorAll('.filter-btn');
-        const cards = document.querySelectorAll('.projet-card');
-
-        filterButtons.forEach(button => {
-            button.addEventListener('click', () => {
-                document.querySelector('.filter-btn.active').classList.remove('active');
-                button.classList.add('active');
-
-                const filterValue = button.getAttribute('data-filter');
-                cards.forEach(card => {
-                    if (filterValue === 'all' || card.getAttribute('data-category') === filterValue) {
-                        card.style.display = 'block';
-                    } else {
-                        card.style.display = 'none';
-                    }
-                });
-            });
-        });
-
-        function openLightbox(imgSrc, title, description) {
-            document.getElementById('lightbox-img').src = imgSrc;
-            document.getElementById('lightbox-title').innerText = title;
-            document.getElementById('lightbox-desc').innerText = description;
-            document.getElementById('lightbox').classList.add('active');
-        }
-
-        function closeLightbox() {
-            document.getElementById('lightbox').classList.remove('active');
-        }
-    </script>
-</body>
-</html>
+<header class="site-header"><a class="brand" href="#accueil"><span>DSKILUSHANG</span><strong>DESIGNER</strong></a><button class="menu-toggle" aria-label="Ouvrir le menu" aria-expanded="false">☰</button><nav class="site-nav" aria-label="Navigation principale"><a href="#portfolio">Portfolio</a><a href="#services">Services</a><a href="#methode">Méthode</a><a href="#contact">Contact</a></nav></header>
+<main>
+<section id="accueil" class="hero section-shell"><div class="hero-copy"><p class="eyebrow">Studio de design visuel</p><h1>Je transforme vos idées en <em>identités fortes.</em></h1><p class="hero-text">DSKILUSHANG DESIGNER accompagne les marques, entreprises et créateurs avec des visuels clairs, singuliers et mémorables.</p><div class="hero-actions"><a class="button button-dark" href="#portfolio">Voir mes créations</a><a class="text-link" href="#contact">Parler de votre projet <span>↗</span></a></div></div><div class="hero-visual"><div class="hero-frame"><img src="hero.jpg" alt="Création visuelle DSKILUSHANG DESIGNER"></div><span class="hero-note">Design avec intention<br><b>— depuis 2024</b></span></div></section>
+<section id="portfolio" class="portfolio section-shell section-space"><div class="section-heading"><div><p class="eyebrow">Sélection de projets</p><h2>Des idées qui prennent forme.</h2></div><p>Quelques directions créatives pour donner à chaque projet une présence unique.</p></div><div class="filter-buttons"><button class="filter-btn active" data-filter="all">Tout</button><button class="filter-btn" data-filter="logo">Logos</button><button class="filter-btn" data-filter="print">Print</button><button class="filter-btn" data-filter="social">Réseaux sociaux</button></div><div class="portfolio-grid"><article class="project-card" data-category="logo"><button class="project-image" data-image="hero.jpg" data-title="Direction artistique" data-description="Une direction visuelle pensée pour installer une marque avec cohérence."><img src="hero.jpg" alt="Projet de direction artistique"></button><div class="project-meta"><h3>Direction artistique</h3><span>Logo & identité</span></div></article><article class="project-card" data-category="print"><button class="project-image" data-image="projet2.jpg" data-title="Composition éditoriale" data-description="Une composition forte et lisible, conçue pour attirer le regard sur tous les supports."><img src="projet2.jpg" alt="Projet de composition graphique"></button><div class="project-meta"><h3>Composition éditoriale</h3><span>Affiche & print</span></div></article><article class="project-card" data-category="social"><button class="project-image" data-image="hero.jpg" data-title="Système social media" data-description="Des formats cohérents pour faire vivre une identité sur les réseaux sociaux."><img src="hero.jpg" alt="Projet de réseaux sociaux"></button><div class="project-meta"><h3>Système social media</h3><span>Contenu digital</span></div></article></div></section>
+<section id="services" class="services section-shell section-space"><div class="section-heading"><div><p class="eyebrow">Ce que je crée</p><h2>Une image qui vous ressemble.</h2></div></div><div class="service-list"><div class="service-item"><span>01</span><h3>Identité visuelle</h3><p>Logo, couleurs et univers graphique pour construire une marque cohérente.</p></div><div class="service-item"><span>02</span><h3>Affiches & supports</h3><p>Des créations imprimées qui transmettent votre message avec impact.</p></div><div class="service-item"><span>03</span><h3>Réseaux sociaux</h3><p>Des visuels réguliers et reconnaissables pour développer votre présence en ligne.</p></div></div></section>
+<section id="methode" class="method section-shell section-space"><div class="method-panel"><p class="eyebrow">Ma méthode</p><h2>De l’idée au visuel final, avec clarté.</h2><div class="method-steps"><div><b>01</b><p><strong>Échange</strong><br>Comprendre votre besoin et votre univers.</p></div><div><b>02</b><p><strong>Conception</strong><br>Explorer une direction créative pertinente.</p></div><div><b>03</b><p><strong>Livraison</strong><br>Vous remettre des fichiers prêts à utiliser.</p></div></div></div></section>
+<section id="contact" class="contact section-shell section-space"><div class="contact-copy"><p class="eyebrow">Un projet en tête ?</p><h2>Créons quelque chose de mémorable.</h2><p>Décrivez votre idée. Chaque projet commence par une conversation.</p></div><form class="contact-form" id="contact-form"><label>Nom<input name="name" type="text" placeholder="Votre nom" required></label><label>Email<input name="email" type="email" placeholder="vous@exemple.com" required></label><label>Votre projet<textarea name="message" rows="5" placeholder="Parlez-moi de votre projet..." required></textarea></label><button class="button button-dark" type="submit">Envoyer le message <span>↗</span></button><p class="form-status" role="status" aria-live="polite"></p></form></section>
+</main>
+<footer class="site-footer section-shell"><a class="brand" href="#accueil"><span>DSKILUSHANG</span><strong>DESIGNER</strong></a><p>© 2026 DSKILUSHANG DESIGNER. Tous droits réservés.</p><div class="footer-links"><a href="https://github.com/Dskilushang/dskilushang.github.io" target="_blank" rel="noopener">GitHub</a><a href="#contact">Contact</a></div></footer>
+<div class="lightbox" id="lightbox" aria-hidden="true"><button class="lightbox-close" aria-label="Fermer">×</button><div class="lightbox-content"><img id="lightbox-img" src="" alt=""><h2 id="lightbox-title"></h2><p id="lightbox-description"></p></div></div><script src="script.js"></script>
+</body></html>
